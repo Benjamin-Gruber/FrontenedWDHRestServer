@@ -40,7 +40,6 @@
                 color="error"
                 class="red darken-2"
                 @click="orderCar()"
-                v-if="car.status === 'available'"
               >
                 ORDER CAR
               </v-btn>
@@ -94,7 +93,6 @@ export default {
           contentType: 'application/json',
           data: {
             title: `${this.car.title} *RESERVED*`,
-            status: 'reserved',
           },
         });
         this.car = data;
