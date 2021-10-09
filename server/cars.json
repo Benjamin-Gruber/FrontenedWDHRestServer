@@ -93,7 +93,7 @@
     },
     {
       "id": 8,
-      "title": "Fair Price RESERVED",
+      "title": "Fair Price",
       "price": "102.100 $",
       "image": "http://localhost:3000/images/car8.png",
       "miles": 112921,
