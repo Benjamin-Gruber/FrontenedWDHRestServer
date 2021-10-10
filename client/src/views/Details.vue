@@ -5,7 +5,7 @@
       <v-container justify-center class="d-flex">
         <div>
           <v-card class="mx-auto my-7" max-width="450">
-            <v-img height="250" :src="car.image"></v-img>
+            <v-img height="350" :src="car.image"></v-img>
 
             <v-card-title
               ><span class="font-weight-bold text-center">{{ car.title }}</span></v-card-title
