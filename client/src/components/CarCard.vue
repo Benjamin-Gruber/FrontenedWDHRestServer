@@ -11,7 +11,7 @@
         Price: <span class="font-weight-black">{{ c.price }}</span> <br /><br />
         <br />
 
-        <v-btn @click="toDetails(c.id)" :cars="c" class="white--text purple darken-1" flat value="feed">
+        <v-btn @click="toDetails(c.id)" v-if="c.status === 'available'" :cars="c" class="white--text purple darken-1" flat value="feed">
           <span>DETAILS</span>
         </v-btn>
       </v-card-text>
