@@ -36,12 +36,7 @@
                 <span>GO BACK</span>
               </v-btn>
 
-              <v-btn
-                color="error"
-                class="red darken-2"
-                @click="orderCar()"
-                v-if="car.status === 'available'"
-              >
+              <v-btn color="error" class="red darken-2" @click="orderCar()" v-if="car.status === 'available'">
                 ORDER CAR
               </v-btn>
             </v-card-actions>
@@ -88,15 +83,16 @@ export default {
 
     async orderCar() {
       try {
+        // this.car.title = this.car.title + ' *RESERVED*'; Damit es direkt Updated (bleibt nicht gespeicher) 
         await axios({
-        url: `http://localhost:3000/cars/${this.car.id}`,
-        method: 'PATCH',
-        contentType: 'application/json',
-        data: {
-          title: this.car.title + '*RESERVED*',
-          status: 'reserved',
-        },
-      });
+          url: `http://localhost:3000/cars/${this.car.id}`,
+          method: 'PATCH',
+          contentType: 'application/json',
+          data: {
+            title: this.car.title + ' *RESERVED*',
+            status: 'reserved',
+          },
+        });
       } catch (error) {
         console.error(error);
       }

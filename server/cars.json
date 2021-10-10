@@ -2,7 +2,7 @@
   "cars": [
     {
       "id": 1,
-      "title": "Top Deal Of Week!*RESERVED*",
+      "title": "Top Deal Of Week! *RESERVED*",
       "price": "189.455 $",
       "image": "http://localhost:3000/images/car1.png",
       "status": "reserved",
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "title": "Bargain!",
+      "title": "Bargain! *RESERVED*",
       "price": "8.700 $",
-      "status": "available",
+      "status": "reserved",
       "image": "http://localhost:3000/images/car2.png",
       "miles": 113666,
       "yearOfMake": 2007,

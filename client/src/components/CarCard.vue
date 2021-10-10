@@ -8,7 +8,8 @@
         <br />
         Year: <span class="font-weight-black">{{ c.yearOfMake }}</span> <br />
         Miles: <span class="font-weight-black">{{ c.miles }}</span> <br /><br />
-        Price: <span class="font-weight-black">{{ c.price }}</span> <br /><br />
+        Price: <span class="font-weight-black" v-if="c.status === 'available'">{{ c.price }}</span> <br /><br />
+        Price: <span class="font-weight-black" v-if="c.status === 'reserved'">N/A</span> <br /><br />
         <br />
 
         <v-btn @click="toDetails(c.id)" v-if="c.status === 'available'" :cars="c" class="white--text purple darken-1" flat value="feed">
